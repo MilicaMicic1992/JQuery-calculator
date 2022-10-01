@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery kalkulator</title>
+</head>
+<body>
+    <p>X</p>
+    <p><input id="x" type="text"></p>
+    <p>Y</p>
+    <p><input id="y" type="text"></p>
+    <p>
+        <button id="plus" >+</button>
+        <button id="minus">-</button>
+        <button id="mnozi">*</button>
+        <button id="deli">/</button>
+    </p>
+    <p>Rezultat</p>
+    <p><input id="rezultat" type="text" disabled></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const $input_x = $("#x")
+        const $input_y = $("#y")
+        const $btn_plus = $("#plus")
+        const $btn_minus = $("#minus")
+        const $btn_mnozi = $("#mnozi")
+        const $btn_deli = $("#deli")
+        const $input_rezultat = $("#rezultat") 
+
+        $btn_plus.on('click', () =>{
+            const x = Number($input_x.val())
+            const y = Number($input_y.val())
+            $input_rezultat.val(x+y)
+        })
+        $btn_minus.on('click', () => {
+            const x = Number($input_x.val())
+            const y = Number($input_y.val())
+            $input_rezultat.val(x-y)
+        })
+        $btn_mnozi.on('click', () => {
+            const x = Number($input_x.val())
+            const y = Number($input_y.val())
+            $input_rezultat.val(x*y)
+        })
+        $btn_deli.on('click', () => {
+            const x = Number($input_x.val())
+            const y = Number($input_y.val())
+            $input_rezultat.val(x/y)
+        })
+</script>
+</body> 
+</html>
